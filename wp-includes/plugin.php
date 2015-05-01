@@ -28,6 +28,7 @@ if ( ! isset( $wp_filter ) )
 if ( ! isset( $wp_actions ) )
 	$wp_actions = array();
 
+// @tudo 剩下这两个不明白是干嘛用的
 if ( ! isset( $merged_filters ) )
 	$merged_filters = array();
 
@@ -886,7 +887,7 @@ function _wp_filter_build_unique_id($tag, $function, $priority) {
 		// Object Class Calling
 		if ( function_exists('spl_object_hash') ) {
 			return spl_object_hash($function[0]) . $function[1];
-		} else {
+		} else { //生成hash的方法，在上面function已存在的情况下，这个可以忽略
 			$obj_idx = get_class($function[0]).$function[1];
 			if ( !isset($function[0]->wp_filter_id) ) {
 				if ( false === $priority )

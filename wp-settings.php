@@ -36,6 +36,7 @@ wp_initial_constants();
 wp_check_php_mysql_versions();
 
 // Disable magic quotes at runtime. Magic quotes are added using wpdb later in wp-settings.php.
+// note that magic_quotes_gpc can't be opened or closed when script running
 @ini_set( 'magic_quotes_runtime', 0 );
 @ini_set( 'magic_quotes_sybase',  0 );
 
@@ -109,6 +110,7 @@ require_once( ABSPATH . WPINC . '/l10n.php' );
 wp_not_installed();
 
 // Load most of WordPress.
+// 怎么有这么多...
 require( ABSPATH . WPINC . '/class-wp-walker.php' );
 require( ABSPATH . WPINC . '/class-wp-ajax-response.php' );
 require( ABSPATH . WPINC . '/formatting.php' );
@@ -199,6 +201,7 @@ wp_cookie_constants();
 wp_ssl_constants();
 
 // Create common globals.
+// 检查运行php文件、浏览器、服务器、是否手机访问等
 require( ABSPATH . WPINC . '/vars.php' );
 
 // Make taxonomies and posts available to plugins and themes.
@@ -210,6 +213,7 @@ create_initial_post_types();
 register_theme_directory( get_theme_root() );
 
 // Load active plugins.
+// 加载激活的插件
 foreach ( wp_get_active_and_valid_plugins() as $plugin ) {
 	wp_register_plugin_realpath( $plugin );
 	include_once( $plugin );

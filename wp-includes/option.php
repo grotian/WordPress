@@ -42,6 +42,7 @@ function get_option( $option, $default = false ) {
 	 * @param bool|mixed $pre_option Value to return instead of the option value.
 	 *                               Default false to skip it.
 	 */
+    //@tudo 这个是干嘛用得？
 	$pre = apply_filters( 'pre_option_' . $option, false );
 	if ( false !== $pre )
 		return $pre;
