@@ -7,3 +7,152 @@ Version: 1.0
 Tags: 生活，技术，博客
 Text Domain: test
 */
+
+body {
+    background: white;
+}
+
+.clearboth {
+    clear: both;
+}
+/*---------------------------header start-------------------------------*/
+nav.blog-header {
+    background: #fff;
+    box-shadow: rgba(60, 60, 60, 0.219608) 0px 0px 10px;
+    margin-bottom: 0;
+}
+
+div.blog-header-container {
+    max-width: 960px;
+}
+
+a.blog-name {
+    color: #333 !important;
+    font-size: 18px;
+}
+
+div.header-menu {
+    float: right;
+}
+
+ul.header-menu-ul a {
+    color: #333 !important;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Microsoft YaHei', 微软雅黑, Arial, Lucida Grande, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+ul.sub-menu {
+    display: none;
+}
+
+li.current-menu-item a{
+    color: #099B43 !important;
+}
+/*---------------------------header end-------------------------------*/
+
+div.content {
+    min-height: 500px;
+    max-width: 960px;
+}
+
+
+/*---------------------------banner start-------------------------------*/
+div.banner-top {
+    height: 256px;
+    background: url(image/banner-top.png) top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*---------------------------banner end-------------------------------*/
+
+/*---------------------------index content start-------------------------------*/
+.page-header small{
+    color: #099B43;
+}
+
+.blog-article {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #E0E0E0;
+    min-height: 241px;
+}
+
+.blog-article a {
+    text-decoration: none;
+}
+
+.blog-article .entry-header {
+    margin-bottom: 0;
+}
+.blog-article .blog-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 0px; 
+    margin-bottom: 10px; 
+}
+
+.blog-title a {
+    color: inherit;
+}
+
+.entry-meta {
+    font-size: 90%;
+    margin-bottom: 20px;
+}
+
+.entry-meta a {
+    color: #777; 
+}
+
+.entry-meta a:hover {
+    color: #099B43;
+}
+
+.entry-meta > span {
+    color: #777; 
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.entry-meta .glyphicon {
+    padding-right: 10px;
+}
+
+div.article {
+    color: #777;
+    font-weight: lighter;
+}
+
+.article .article-img img {
+    float: left;
+    margin-right: 20px;
+    width: 165px;
+    height: 135px;
+}
+
+.blog-article .read-more {
+    position: absolute;
+    bottom: 20px;
+}
+/*---------------------------index content end-------------------------------*/
+
+/*---------------------------footer end-------------------------------*/
+nav.blog-footer {
+    text-align: center;
+    margin-bottom:0;
+    border-radius:0;
+}
+
+nav.blog-footer a {
+    color: #777;
+    text-decoration: none;
+}
+
+nav.blog-footer .copyright {
+    color: #777;
+    margin: 15px 0;
+}
+/*---------------------------footer end-------------------------------*/

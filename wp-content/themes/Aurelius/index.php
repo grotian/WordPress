@@ -2,8 +2,8 @@
     <!-- Column 1 /Content -->
     <div class="grid_8">
         <!-- Blog Post -->
-        <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : the_post(); ?>
+        <?php if (has_posts()) : ?>
+            <?php while (has_posts()) : the_post(); ?>
         <div class="post">
             <!-- Post Title -->
             <h3 class="title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
