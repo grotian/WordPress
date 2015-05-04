@@ -47,17 +47,81 @@
                             <?php the_excerpt();?>
                         </div>
                     </div>
-                    <a class="btn btn-default read-more" href="<?php the_permalink();?>">阅读全文</a>
+                    <a class="btn btn-success read-more" href="<?php the_permalink();?>">阅读全文</a>
                     <div class="clearboth"></div>
                 </article> 
                     <?php endwhile; ?>
+                    <?php wp_pagenavi(); ?> 
                 <?php else : ?>
                 <h3 class="title"><a href="#" rel="bookmark">未找到</a></h3>
                 <p>没有找到任何文章！</p>
                 <?php endif; ?>
             </div> 
-            <div class="col-md-4"></div> 
+            <div class="col-md-4 siderbar">
+                <div class="page-header siderbar-music">
+                    <h5>音乐随心听</h5>
+                </div>
+                <div class="music-163">
+                    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="http://music.163.com/outchain/player?type=0&id=70665568&auto=1&height=90"></iframe>
+                </div>
+                <div class="page-header">
+                    <h5>分类目录</h5>
+                </div>
+                <div class="siderbar-category">
+                <table class="table">
+                    <tr>
+                        <td>
+                            <span>Messages <span class="badge">4</span></span>
+                        </td>
+                        <td>
+                            <span>Messages <span class="badge">4</span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Messages <span class="badge">4</span></span>
+                        </td>
+                        <td>
+                            <span>Messages <span class="badge">4</span></span>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+                <div class="page-header">
+                    <h5>最新文章</h5>
+                </div>
+                <div class="siderbar-news">
+                    <ul class="list-group">
+                        <li class="list-group-item"><span class="siderbar-news-sep">&middot;</span>Cras justo odio</li>
+                        <li class="list-group-item"><span class="siderbar-news-sep">&middot;</span>Cras justo odio</li>
+                        <li class="list-group-item"><span class="siderbar-news-sep">&middot;</span>Cras justo odio</li>
+                        <li class="list-group-item"><span class="siderbar-news-sep">&middot;</span>Cras justo odio</li>
+                        <li class="list-group-item"><span class="siderbar-news-sep">&middot;</span>Cras justo odio</li>
+                    </ul>
+                </div>
+                <div class="page-header">
+                    <h5>点击排行</h5>
+                </div>
+                <div class="siderbar-tops">
+                    <ul class="list-group">
+                        <li class="list-group-item"><span class="siderbar-tops-sep">&middot;</span>Cras justo odio</li>
+                        <li class="list-group-item"><span class="siderbar-tops-sep">&middot;</span>Cras justo odio</li>
+                        <li class="list-group-item"><span class="siderbar-tops-sep">&middot;</span>Cras justo odio</li>
+                        <li class="list-group-item"><span class="siderbar-tops-sep">&middot;</span>Cras justo odio</li>
+                        <li class="list-group-item"><span class="siderbar-tops-sep">&middot;</span>Cras justo odio</li>
+                    </ul>
+                </div>
+
+                <div class="page-header">
+                    <h5>标签云</h5>
+                </div>
+                <div class="siderbar-tags">
+                    <?php wp_tag_cloud('smallest=10&number=50&orderby=count&order=DESC');?> 
+                </div>
+                <div class="page-header siderbar-interest">
+                    <h5>可能感兴趣</h5>
+                </div>
+            </div> 
         </div>      
-        <div></div>
     </div>
 <?php get_footer();?>

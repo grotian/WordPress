@@ -33,6 +33,20 @@ function mmimg($post_id = null) {
     return $shareimg;
 } 
 
+//标签云彩色
+function colorCloud($text) {
+    $text = preg_replace_callback('|<a (.+?)>|i','colorCloudCallback', $text);
+    return $text;
+}
+function colorCloudCallback($matches) {
+    $text = $matches[1];
+    $color = dechex(mt_rand(0,16777215));
+    $pattern = '/style=(\'|\”)(.*)(\'|\”)/i';
+    $text = preg_replace($pattern, "style=\"color:#{$color};$2;\"", $text);
+    return "<a $text>";
+}
+add_filter('wp_tag_cloud', 'colorCloud', 1);
+
 //禁用Open Sans
 class Disable_Google_Fonts {
     public function __construct() {

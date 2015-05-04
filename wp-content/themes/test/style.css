@@ -15,6 +15,33 @@ body {
 .clearboth {
     clear: both;
 }
+
+.wp-pagenavi {
+    font-size:14px;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.wp-pagenavi .page, .wp-pagenavi .current {
+    text-decoration: none;
+    color: #777;
+    display:inline-block;
+    width:45px;
+    height:45px;
+    line-height:45px;
+    margin:0 5px;
+}
+
+.wp-pagenavi .current {
+    border-radius:50%;
+    border:1px solid #d3d3d3;
+    color:#515865;
+}
+
+.wp-pagenavi .current:hover {
+    background: #099B43;
+    color:#FFF;
+}
 /*---------------------------header start-------------------------------*/
 nav.blog-header {
     background: #fff;
@@ -137,7 +164,53 @@ div.article {
     position: absolute;
     bottom: 20px;
 }
+
 /*---------------------------index content end-------------------------------*/
+
+/*---------------------------siderbar start-------------------------------*/
+.siderbar .page-header {
+    color: #099B43;
+}
+
+.siderbar-music {
+    padding-top: 14px;
+}
+
+.music-163 {
+    margin-left: -10px;
+}
+
+.siderbar-category td {
+    border-top: none !important;
+    padding-left: 0 !important;
+}
+
+.siderbar-news li {
+    color: #333;
+    font-weight: 400;
+    font-size: 12px;
+    border: none;
+    padding: 5px 15px 5px 0;
+}
+
+.siderbar-news .siderbar-news-sep {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.siderbar-tops li {
+    color: #333;
+    font-weight: 400;
+    font-size: 12px;
+    border: none;
+    padding: 5px 15px 5px 0;
+}
+
+.siderbar-tops .siderbar-tops-sep {
+    font-weight: bold;
+    margin-right: 10px;
+}
+/*---------------------------siderbar end-------------------------------*/
 
 /*---------------------------footer end-------------------------------*/
 nav.blog-footer {
