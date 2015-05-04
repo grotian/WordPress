@@ -8,6 +8,7 @@ if ( ! function_exists('test_themesetup')) {
 }
 add_action( 'after_setup_theme', 'test_themesetup' );
 
+//获取文章图片
 add_theme_support( 'post-thumbnails' );
 function catch_that_image() {
     global $post, $posts;

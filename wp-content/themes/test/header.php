@@ -49,3 +49,11 @@
             </div>
         </div>
     </nav>
+    <!--
+    <?php if ( is_home() ) :?>
+    <div class="banner-top">
+    </div>
+    <?php endif;?>
+    -->
+    <div class="container content">    
+        <div class="row">

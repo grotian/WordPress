@@ -1,7 +1,13 @@
 <?php get_header();?>
     <div class="col-md-9 panel-left">
         <div class="page-header">
-            <h1><small>最新文章</small></h1>
+            <h1><small>
+                <?php if ( is_category() ) :?> 
+                    <?php single_cat_title();?>
+                <?php elseif ( is_tag() ) :?>
+                    <?php single_tag_title();?>
+                <?php endif;?>
+            </small></h1>
         </div>
         <?php if ( have_posts() ) :?>
             <?php while ( have_posts() ) : the_post();?>

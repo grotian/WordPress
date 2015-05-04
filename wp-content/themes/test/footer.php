@@ -1,3 +1,5 @@
+            </div>      
+        </div>
         <nav class="navbar navbar-default navbar-inverse blog-footer">
             <div class="container-fluid">
                 <p class="copyright">Copyright © 2012 - 2015 <a href="<?php echo esc_url( home_url( '/' ) );?>"><?php bloginfo('name');?></a> 京ICP备13025598号</p>
