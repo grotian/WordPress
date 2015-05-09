@@ -46,7 +46,7 @@
                     <?php the_excerpt();?>
                 </div>
             </div>
-            <a class="btn btn-primary read-more" href="<?php the_permalink();?>">阅读全文</a>
+            <a class="btn btn-read read-more" href="<?php the_permalink();?>">阅读全文</a>
             <div class="clearboth"></div>
         </article> 
             <?php endwhile; ?>

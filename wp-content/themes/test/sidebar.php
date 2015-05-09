@@ -1,11 +1,13 @@
 <div class="col-md-3 siderbar">
     <div class="page-header siderbar-music">
-        <h5>音乐随心听</h5>
+        <h5>今日笑话</h5>
     </div>
     <div class="music-163">
+        <?php if ( is_home() ) :?>
         <!--
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="http://music.163.com/outchain/player?type=0&id=70665568&auto=1&height=90"></iframe>
         -->
+        <?php endif;?>
     </div>
     <div class="page-header">
         <h5>分类目录</h5>

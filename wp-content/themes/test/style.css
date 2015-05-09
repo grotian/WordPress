@@ -10,6 +10,12 @@ Text Domain: test
 
 body {
     background: white;
+    font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
+}
+
+blockquote {
+    font-size: 14px;
+    color: #333;
 }
 
 a {
@@ -52,8 +58,20 @@ a:hover {
 }
 
 .panel-left {
-    padding-right: 60px;
+    padding-right: 30px;
+    border-right: 10px solid #eee;
 }
+
+.btn-read {
+    background-color: #d6623d;
+    border-color: #d6623d;
+    color: #fff;
+}
+
+.btn-read:hover {
+    color: #fff;
+}
+
 /*---------------------------header start-------------------------------*/
 nav.blog-header {
     background: #fff;
@@ -62,7 +80,7 @@ nav.blog-header {
 }
 
 div.blog-header-container {
-    max-width: 960px;
+    max-width: 1170px;
 }
 
 a.blog-name {
@@ -93,7 +111,7 @@ li.current-menu-item a{
 
 div.content {
     min-height: 500px;
-    max-width: 960px;
+    max-width: 1170px;
 }
 
 
@@ -113,20 +131,20 @@ div.banner-top {
 
 .blog-article {
     position: relative;
-    padding: 20px;
-    margin-bottom: 30px;
-    border: 1px solid #E0E0E0;
-    min-height: 241px;
+    padding: 30px 20px;
+    border-bottom: 1px dashed #E0E0E0;
+    min-height: 300px;
 }
 
 .blog-article .entry-header {
     margin-bottom: 0;
 }
 .blog-article .blog-title {
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 600;
     text-transform: uppercase;
     margin-top: 0px; 
-    margin-bottom: 10px; 
+    margin-bottom: 20px; 
 }
 
 .blog-title a {
@@ -163,18 +181,22 @@ div.article {
 .article .article-img img {
     float: left;
     margin-right: 20px;
-    width: 165px;
-    height: 135px;
+    width: 185px;
 }
 
 .blog-article .read-more {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
+    right: 20px;
 }
 
 /*---------------------------index content end-------------------------------*/
 
 /*---------------------------siderbar start-------------------------------*/
+.siderbar {
+    padding-left: 30px;
+}
+
 .siderbar .page-header {
     color: #428BD1;
 }
@@ -234,12 +256,12 @@ div.article {
     margin: 20px 30px 20px 0; 
     line-height: 28px; 
     font-size: 14px; 
-    text-indent: 2em; 
-    color:#666}
+    color:#333;
 }
 
 .post-content p {
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    text-indent: 2em;
 }
 
 /*---------------------------single post end-------------------------------*/
@@ -249,6 +271,7 @@ nav.blog-footer {
     text-align: center;
     margin-bottom:0;
     border-radius:0;
+    margin-top: 50px;
 }
 
 nav.blog-footer a {
