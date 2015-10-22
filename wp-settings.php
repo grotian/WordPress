@@ -77,6 +77,7 @@ require( ABSPATH . WPINC . '/plugin.php' );
 require( ABSPATH . WPINC . '/pomo/mo.php' );
 
 // Include the wpdb class and, if present, a db.php database drop-in.
+//这里是重点，比较重要的部分，要好好看一看
 require_wp_db();
 
 // Set the database table prefix and the format specifiers for database table columns.

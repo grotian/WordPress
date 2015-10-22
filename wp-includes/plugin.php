@@ -20,6 +20,8 @@
  */
 
 // Initialize the filter globals.
+//$merged_filters里面放的是执行过apply_filters的filters
+//$wp_current_filter里面放的是正在执行apply_filters的filters
 global $wp_filter, $wp_actions, $merged_filters, $wp_current_filter;
 
 if ( ! isset( $wp_filter ) )
@@ -28,7 +30,6 @@ if ( ! isset( $wp_filter ) )
 if ( ! isset( $wp_actions ) )
 	$wp_actions = array();
 
-// @tudo 剩下这两个不明白是干嘛用的
 if ( ! isset( $merged_filters ) )
 	$merged_filters = array();
 
@@ -206,7 +207,6 @@ function apply_filters( $tag, $value ) {
 
 	if ( empty($args) )
 		$args = func_get_args();
-
 	do {
 		foreach( (array) current($wp_filter[$tag]) as $the_ )
 			if ( !is_null($the_['function']) ){
@@ -223,6 +223,9 @@ function apply_filters( $tag, $value ) {
 
 /**
  * Execute functions hooked on a specific filter hook, specifying arguments in an array.
+ *
+ * 其实就是apply_filters的另一种形式
+ * apply_filters('tag', 'value', 0, 1) = apply_filters_ref_array('tag', array('value', 0, 1))
  *
  * @see 3.0.0
  *
@@ -307,6 +310,7 @@ function remove_filter( $tag, $function_to_remove, $priority = 10 ) {
 		if ( empty( $GLOBALS['wp_filter'][ $tag ] ) ) {
 			$GLOBALS['wp_filter'][ $tag ] = array();
 		}
+        //这里为什么要unset？
 		unset( $GLOBALS['merged_filters'][ $tag ] );
 	}
 
@@ -333,6 +337,7 @@ function remove_all_filters( $tag, $priority = false ) {
 		}
 	}
 
+    //同上，对此不是很理解
 	if ( isset( $merged_filters[ $tag ] ) ) {
 		unset( $merged_filters[ $tag ] );
 	}
